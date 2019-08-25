@@ -947,7 +947,7 @@ void MainWindow::onClickVisualize() {
 void MainWindow::modifyPage(movieitem* m) {
     QDialog* dialog = new QDialog(this);
     dialog->setFixedSize(400, 450);
-    dialog->setWindowTitle("Aggiungi un film");
+    dialog->setWindowTitle("Modifica elemento");
 
     addVector.clear();
 
