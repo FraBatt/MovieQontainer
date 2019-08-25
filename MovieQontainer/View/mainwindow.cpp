@@ -33,16 +33,9 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
 
     titleLabel= new QLabel();
     titleLabel->setScaledContents(true);
-    QImage img = QImage("/View/logo1.jpeg");
-    QPixmap logo(QPixmap::fromImage(img));
-    if(logo.isNull()) {
-        titleLabel->setText("Movie Qontainer");
-        titleLabel->setFont(QFont("Arial", 36));
-    }
-    else {
-        titleLabel->setPixmap(logo);
-        titleLabel->setFixedSize(250, 80);
-    }
+    QPixmap logo(":/img/logo.png");
+    titleLabel->setPixmap(logo);
+    titleLabel->setFixedSize(300, 200);
     contGrid->addWidget(titleLabel, 0, 0, Qt::AlignCenter);
 
     //---------------------SEARCH-----------------
